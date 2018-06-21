@@ -1,5 +1,5 @@
 import React from 'react'
-import Lyric from '../components/Lyric'
+import OpponentLyric from '../components/OpponentLyric'
 import { connect } from 'react-redux'
 import { clearLetters } from '../actions'
 import { clearLetter } from '../actions'
@@ -19,7 +19,7 @@ class LyricContainer extends React.Component {
     this.props.handleClearLetters();
 
     if(this.props.lyrics[this.state.n]){
-      const currentLyric = <Lyric content={this.props.lyrics[this.state.n].content}/>
+      const currentLyric = <OpponentLyric content={this.props.lyrics[this.state.n].content}/>
       this.setState({lyric: currentLyric, n: this.state.n + 1}, () => setTimeout(this.displayLyrics, this.props.lyrics[this.state.n - 1].duration * 1000))
     }
   }

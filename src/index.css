@@ -1,8 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Consolas, Monaco, monospace;
   text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+audio {
+   display: none;
 }
 
 video {
@@ -22,6 +28,40 @@ span {
 	background-color: #04AF71;
 }
 
+#terminal {
+  font: bold 300% Consolas, Monaco, monospace;
+	border-right: .1em solid white;
+	width: 16.5em;
+	width: 21ch;
+	margin: 30px auto;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 5s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+#nametext {
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  padding: 3px;
+  font-size: 14px;
+}
+
+#scores {
+  display: flex;
+  justify-content: center;
+}
+
+#scores div {
+    margin: 0 20px;
+}
+
 #lyric-container {
   font-size: 40px;
   position: absolute;
@@ -30,19 +70,20 @@ span {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-#video-container {
+#two-player-container {
+  display: flex;
+}
+
+#two-player-container .add-border {
+  margin: 0 5px;
+  border-right: 2px dashed white;
+}
+
+.video-container {
   width: 640px;
   height: 480px;
   margin: 0 auto;
   top: 0; bottom: 0;
   overflow: hidden;
   position: relative;
-}
-
-#app {
-  display: flex;
-}
-
-#app div {
-  margin-right: 10px;
 }
